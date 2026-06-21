@@ -1,0 +1,8 @@
+# Redirige toutes les requêtes (hors fichiers/dossiers réels) vers index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Sécurité : interdit l'accès direct aux dossiers applicatifs
+RedirectMatch 403 ^/(app|config|routes|database)(/|$)

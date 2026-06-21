@@ -1,0 +1,111 @@
+/* ===== Section "Ils nous font confiance" + accents finance ===== */
+
+#trust {
+    padding: 96px 0 90px;
+    background: linear-gradient(180deg, #0000FF 0%, #0000CC 100%);
+    position: relative;
+    overflow: hidden;
+}
+#trust .trust-head { text-align: center; margin-bottom: 12px; }
+#trust .section-label { background: rgba(255,255,255,.16); color: #fff; }
+#trust h2 { color: #fff; }
+#trust .trust-sub { max-width: 600px; margin: 0 auto; color: #CCCCFF; font-size: 1.02rem; }
+
+/* Bandeaux défilants (marquee) */
+.marquee {
+    position: relative;
+    margin-top: 30px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-track {
+    display: flex;
+    gap: 18px;
+    width: max-content;
+}
+.marquee-track.to-right { animation: marqueeRight 46s linear infinite; }
+.marquee-track.to-left  { animation: marqueeLeft 52s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+@keyframes marqueeRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+@keyframes marqueeLeft  { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.logo-chip {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    min-width: 178px;
+    padding: 0 26px;
+    background: #fff;
+    border-radius: 13px;
+    box-shadow: 0 8px 22px rgba(0,0,40,.16);
+    font-weight: 800;
+    font-size: 1.02rem;
+    letter-spacing: .02em;
+    color: #000066;
+    white-space: nowrap;
+}
+.logo-chip.ghost {
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.22);
+    box-shadow: none;
+    color: #fff;
+}
+
+/* Répartition par mission */
+.trust-categories {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 54px;
+}
+.trust-cat {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 14px;
+    padding: 22px 24px;
+}
+.trust-cat h4 {
+    font-size: .82rem; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; color: #fff; margin-bottom: 14px;
+}
+.trust-cat ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.trust-cat li {
+    font-size: .86rem; color: #E6E6FF;
+    display: flex; align-items: center; gap: 9px;
+}
+.trust-cat li::before {
+    content: ''; width: 5px; height: 5px; border-radius: 50%;
+    background: #9999FF; flex: none;
+}
+
+/* Image accent finance (hero / about) */
+.media-frame {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0 24px 60px rgba(0,0,255,.18);
+}
+.media-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Bande "Notre approche" sur photo */
+.approach {
+    position: relative; border-radius: 24px; overflow: hidden;
+    min-height: 380px; display: flex; align-items: center;
+}
+.approach img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.approach .overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(100deg, rgba(0,0,102,.92) 0%, rgba(0,0,204,.78) 46%, rgba(0,0,255,.25) 100%);
+}
+.approach .approach-content { position: relative; padding: 54px 48px; max-width: 620px; color: #fff; }
+.approach .approach-content h2 { color: #fff; }
+.approach .approach-content p { color: #E6E6FF; }
+
+@media (max-width: 768px) {
+    .approach .approach-content { padding: 36px 28px; }
+}

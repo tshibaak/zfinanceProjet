@@ -1,0 +1,74 @@
+/* ============================================================
+   Zfinances — Admin (aligné sur le bleu de marque #0000FF)
+   ============================================================ */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Inter','Segoe UI',sans-serif; }
+
+body { background:#F0F0FF; min-height:100vh; display:flex; color:#000066; }
+
+/* SIDEBAR */
+.sidebar {
+    width:260px; background:#000066; color:#fff;
+    position:fixed; left:0; top:0; bottom:0; padding:24px 18px;
+}
+.sidebar h2 { text-align:center; margin-bottom:36px; font-size:18px; letter-spacing:.04em; color:#fff; }
+.sidebar ul { list-style:none; }
+.sidebar ul li { margin-bottom:8px; }
+.sidebar ul li a {
+    display:block; color:#CCCCFF; text-decoration:none;
+    padding:12px 15px; border-radius:10px; transition:.25s; font-size:.92rem; font-weight:500;
+}
+.sidebar ul li a:hover { background:rgba(255,255,255,.1); color:#fff; }
+.sidebar ul li a.active { background:#0000FF; color:#fff; }
+.logout-btn {
+    width:100%; text-align:left; background:transparent; border:none; color:#CCCCFF;
+    padding:12px 15px; border-radius:10px; cursor:pointer; font-size:.92rem; font-weight:500; transition:.25s;
+}
+.logout-btn:hover { background:rgba(255,255,255,.1); color:#fff; }
+
+/* MAIN */
+.main { margin-left:260px; width:calc(100% - 260px); padding:30px; }
+
+.header { background:#fff; padding:22px 26px; border-radius:14px; margin-bottom:24px; box-shadow:0 4px 16px rgba(0,0,255,.06); }
+.header h1 { color:#000066; font-size:1.5rem; }
+.header p { color:#000099; margin-top:4px; }
+
+.flash { padding:14px 18px; border-radius:10px; margin-bottom:20px; font-weight:500; }
+.flash-success { background:#E6E6FF; color:#000066; border-left:4px solid #0000FF; }
+.flash-error { background:#ffebee; color:#c62828; border-left:4px solid #e53935; }
+
+/* STATS */
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; }
+.card { background:#fff; border-radius:14px; padding:26px; box-shadow:0 4px 16px rgba(0,0,255,.06); text-align:center; }
+.card h3 { color:#000099; margin-bottom:14px; font-size:.95rem; }
+.card .number { font-size:2.5rem; font-weight:800; color:#0000FF; }
+
+/* TABLES */
+.table-container { background:#fff; padding:22px; border-radius:14px; box-shadow:0 4px 16px rgba(0,0,255,.06); overflow-x:auto; }
+table { width:100%; border-collapse:collapse; }
+thead { background:#000066; color:#fff; }
+th, td { padding:12px 14px; text-align:left; border-bottom:1px solid #E6E6FF; font-size:.9rem; }
+tbody tr:hover { background:#F5F5FF; }
+label { font-size:.82rem; font-weight:600; color:#000099; margin-bottom:5px; display:block; }
+
+/* BOUTONS */
+.action-btn { padding:8px 13px; border:none; border-radius:7px; cursor:pointer; color:#fff; font-size:.84rem; font-weight:600; transition:.25s; }
+.action-btn:hover { transform:translateY(-2px); opacity:.92; }
+.btn-view { background:#0000FF; }
+.btn-delete { background:#d62828; }
+
+.badge { padding:5px 11px; border-radius:20px; color:#fff; font-size:.72rem; font-weight:600; }
+.badge-read { background:#2a9d8f; }
+.badge-unread { background:#f77f00; }
+
+/* MODAL */
+.modal { display:none; position:fixed; z-index:9999; inset:0; background:rgba(0,0,40,.6); }
+.modal-content { background:#fff; width:70%; max-width:680px; margin:5% auto; padding:28px; border-radius:14px; box-shadow:0 16px 50px rgba(0,0,40,.35); }
+.close { float:right; font-size:30px; cursor:pointer; color:#000066; line-height:1; }
+.close:hover { color:#d62828; }
+#modalMessage { white-space:pre-wrap; line-height:1.7; color:#000099; }
+
+@media (max-width:768px) {
+    .sidebar { position:static; width:100%; height:auto; }
+    body { flex-direction:column; }
+    .main { margin-left:0; width:100%; }
+}
