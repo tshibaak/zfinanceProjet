@@ -1,6 +1,8 @@
 <?php
-    function verifVar($var ,string $message = ''){
-        if(!isset($var) && empty($var)){
-            return echo $message;
+    function verifVar($var ,string $message = '')
+    {
+        if(!isset($var) && empty($var))
+        {
+            return " " . $message;
         }
     }

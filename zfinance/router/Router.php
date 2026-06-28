@@ -35,22 +35,22 @@
       {
           return self::$uri . $route ;
       }
-       public static function get(string $route,mixed $target)
+       public static function get(string $route,mixed $target = [])
        {
           App::getInstanceRouter()->map('GET',$route,$target,self::$route_name);
        }
 
-       public static function post(string $route, mixed $target)
+       public static function post(string $route, mixed $target = [])
        {
         App::getInstanceRouter()->map('POST',$route,$target,self::$route_name);
        }
 
-       public static function delete(string $route, mixed $target, string $name = '')
+       public static function delete(string $route, mixed $target = [], string $name = '')
        {
         App::getInstanceRouter()->map('DELETE',$route,$target,self::$route_name);
        }
 
-       public static function put(string $route,mixed $target)
+       public static function put(string $route,mixed $target = [])
        {
         App::getInstanceRouter()->map('PUT',$route,$target,self::$route_name);
        }
