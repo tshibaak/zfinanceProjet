@@ -38,5 +38,11 @@ create table if not exists admin(
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE Table if not exists articles(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    content TEXT,
+    image TEXT,
+    link TEXT
+);
 
 insert ignore into admin(nameAdmin,passAdmin) values("admin","admin123");
