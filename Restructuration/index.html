@@ -1,0 +1,838 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zfinances - Cabinet d'expertise comptable</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar" aria-label="Navigation principale">
+    <div class="container navbar-inner">
+      <a class="brand" href="#zf-hero">
+        <img src="https://image.youmind.com/user-files/eebe4f28a1c7f3ce5132746a515a51ef427cc8493122627c398898d4b8feb61a?format=jpeg&width=4000&height=4000&fit=scale-down" alt="Zfinances">
+      </a>
+      <nav aria-label="Menu principal">
+        <a class="nav-link" href="#zf-hero">Accueil</a>
+        <a class="nav-link" href="#zf-services">Nos services</a>
+        <a class="nav-link" href="#zf-about">À propos & équipe</a>
+        <a class="nav-link" href="#zf-actualites">Actualités</a>
+        <a class="nav-link" href="#zf-contact">Contact</a>
+      </nav>
+      <a class="button-primary" href="#zf-contact">Rendez-vous</a>
+      <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <img class="drawer-logo" src="https://image.youmind.com/user-files/eebe4f28a1c7f3ce5132746a515a51ef427cc8493122627c398898d4b8feb61a?format=jpeg&width=4000&height=4000&fit=scale-down" alt="Zfinances">
+      <button class="drawer-close" type="button" id="drawerClose" aria-label="Fermer le menu">X</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Menu mobile">
+      <a href="#zf-hero">Accueil</a>
+      <a href="#zf-services">Nos services</a>
+      <a href="#zf-about">À propos & équipe</a>
+      <a href="#zf-actualites">Actualités</a>
+      <a href="#zf-contact">Contact</a>
+    </nav>
+    <div class="drawer-footer">
+      <a class="button-primary" href="#zf-contact">Prendre rendez-vous</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero" id="zf-hero">
+      <div class="hero-slides">
+        <img class="hero-slide active" src="assets/cabinet/accueil-poignee.jpg" alt="Partenariat de confiance — ZFINANCES">
+        <img class="hero-slide" src="assets/cabinet/accueil-laptop.jpg" alt="Gestion financière au quotidien — ZFINANCES">
+        <img class="hero-slide" src="assets/cabinet/equipe-groupe.jpg" alt="L'équipe ZFINANCES">
+        <img class="hero-slide" src="assets/cabinet/reunion.jpg" alt="Réunion de travail — cabinet ZFINANCES, Kinshasa">
+        <img class="hero-slide" src="assets/cabinet/leki-ohada.jpg" alt="Expertise comptable OHADA">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-overlay-top"></div>
+      <div class="hero-content">
+        <div class="hero-badge fade-up">
+          <span class="hero-badge-dot"></span>
+          Expertise comptable & Audit financier
+        </div>
+        <h1 class="hero-title fade-up">Votre réussite<br>financière,<br><span>notre expertise</span></h1>
+        <p class="hero-text fade-up">Nous accompagnons les entreprises en RDC dans leur développement en offrant des services de qualité en expertise comptable, conseil fiscal et gestion d'entreprise, ainsi qu'en représentation internationale.</p>
+        <p class="hero-quote fade-up">« Avec vous, dans votre équipe »</p>
+        <div class="hero-actions fade-up">
+          <a class="button-primary" href="#zf-services">Découvrir nos services</a>
+          <a class="button-secondary" href="#zf-contact">Nous contacter</a>
+        </div>
+        <div class="stats-panel fade-up">
+          <div class="stat-card">
+            <div class="stat-number"><span class="count" data-target="50">+50</span></div>
+            <div class="stat-label">Clients satisfaits</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number"><span class="count" data-target="15">+15</span></div>
+            <div class="stat-label">Ans d'expérience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number"><span class="count" data-target="98">98%</span></div>
+            <div class="stat-label">De satisfaction</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom fade-up">
+        <div class="hero-caption" id="heroCaption">Votre partenaire de confiance</div>
+        <div class="hero-controls">
+          <div class="hero-dots" aria-label="Contrôles du carrousel">
+            <button class="hero-dot active" type="button" data-index="0" aria-label="Image 1"></button>
+            <button class="hero-dot" type="button" data-index="1" aria-label="Image 2"></button>
+            <button class="hero-dot" type="button" data-index="2" aria-label="Image 3"></button>
+            <button class="hero-dot" type="button" data-index="3" aria-label="Image 4"></button>
+            <button class="hero-dot" type="button" data-index="4" aria-label="Image 5"></button>
+          </div>
+          <div class="hero-arrows">
+            <button class="hero-arrow" type="button" data-action="prev" aria-label="Image précédente">◀</button>
+            <button class="hero-arrow" type="button" data-action="next" aria-label="Image suivante">▶</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zf-services">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">Nos services</span>
+          <h2 class="section-title">Une expertise complète à votre service</h2>
+          <p class="section-subtitle">Une gamme complète de solutions pour sécuriser et optimiser votre gestion financière.</p>
+        </div>
+        <div class="grid-2">
+          <article class="service-card fade-up">
+            <button type="button" class="service-toggle" aria-expanded="false">
+              <div class="service-summary">
+                <div class="service-icon">&#128196;</div>
+                <div class="service-body">
+                  <h3>Expertise Comptable</h3>
+                  <p>Tenue et révision de comptabilité, bilans et comptes de résultat, liasses fiscales et reporting financier.</p>
+                </div>
+                <span class="chevron">▾</span>
+              </div>
+            </button>
+            <div class="service-details">
+              <div class="service-details-inner">
+                <div class="service-detail"><span></span><p>Tenue et révision de la comptabilité</p></div>
+                <div class="service-detail"><span></span><p>Bilans et comptes de résultat</p></div>
+                <div class="service-detail"><span></span><p>États financiers conformes au référentiel OHADA</p></div>
+              </div>
+            </div>
+          </article>
+          <article class="service-card fade-up">
+            <button type="button" class="service-toggle" aria-expanded="false">
+              <div class="service-summary">
+                <div class="service-icon">&#128202;</div>
+                <div class="service-body">
+                  <h3>Audit Financier</h3>
+                  <p>Audit légal et contractuel, commissariat aux comptes, certification des comptes annuels et audit d'acquisition.</p>
+                </div>
+                <span class="chevron">▾</span>
+              </div>
+            </button>
+            <div class="service-details">
+              <div class="service-details-inner">
+                <div class="service-detail"><span></span><p>Commissariat aux comptes</p></div>
+                <div class="service-detail"><span></span><p>Certification des comptes (normes ONEC)</p></div>
+                <div class="service-detail"><span></span><p>Audit financier et contrôle interne</p></div>
+              </div>
+            </div>
+          </article>
+          <article class="service-card fade-up">
+            <button type="button" class="service-toggle" aria-expanded="false">
+              <div class="service-summary">
+                <div class="service-icon">&#128176;</div>
+                <div class="service-body">
+                  <h3>Conseil Fiscal</h3>
+                  <p>Optimisation fiscale, déclarations, accompagnement lors des contrôles fiscaux et veille réglementaire.</p>
+                </div>
+                <span class="chevron">▾</span>
+              </div>
+            </button>
+            <div class="service-details">
+              <div class="service-details-inner">
+                <div class="service-detail"><span></span><p>Optimisation fiscale</p></div>
+                <div class="service-detail"><span></span><p>Déclarations fiscales</p></div>
+                <div class="service-detail"><span></span><p>TVA et conformité réglementaire</p></div>
+              </div>
+            </div>
+          </article>
+          <article class="service-card fade-up">
+            <button type="button" class="service-toggle" aria-expanded="false">
+              <div class="service-summary">
+                <div class="service-icon">&#128202;</div>
+                <div class="service-body">
+                  <h3>Conseil Juridique</h3>
+                  <p>Création et transformation de sociétés, rédaction de statuts, pactes d'associés et restructurations.</p>
+                </div>
+                <span class="chevron">▾</span>
+              </div>
+            </button>
+            <div class="service-details">
+              <div class="service-details-inner">
+                <div class="service-detail"><span></span><p>Création et enregistrement d'entreprise</p></div>
+                <div class="service-detail"><span></span><p>Rédaction de statuts et pactes d'associés</p></div>
+                <div class="service-detail"><span></span><p>Restructurations et formalités civiles</p></div>
+              </div>
+            </div>
+          </article>
+          <article class="service-card fade-up">
+            <button type="button" class="service-toggle" aria-expanded="false">
+              <div class="service-summary">
+                <div class="service-icon">&#128188;</div>
+                <div class="service-body">
+                  <h3>Gestion de Paie</h3>
+                  <p>Externalisation complète de la paie, bulletins, déclarations sociales et accompagnement RH.</p>
+                </div>
+                <span class="chevron">▾</span>
+              </div>
+            </button>
+            <div class="service-details">
+              <div class="service-details-inner">
+                <div class="service-detail"><span></span><p>Mise en conformité sociale (CNSS, INPP, ONEM)</p></div>
+                <div class="service-detail"><span></span><p>Bulletins de paie et déclarations</p></div>
+                <div class="service-detail"><span></span><p>Gestion du personnel et suivi RH</p></div>
+              </div>
+            </div>
+          </article>
+          <article class="service-card fade-up">
+            <button type="button" class="service-toggle" aria-expanded="false">
+              <div class="service-summary">
+                <div class="service-icon">&#128200;</div>
+                <div class="service-body">
+                  <h3>Accompagnement</h3>
+                  <p>Business plan, prévisionnel financier, accompagnement à la levée de fonds et suivi de la performance.</p>
+                </div>
+                <span class="chevron">▾</span>
+              </div>
+            </button>
+            <div class="service-details">
+              <div class="service-details-inner">
+                <div class="service-detail"><span></span><p>Business plan et prévisionnel</p></div>
+                <div class="service-detail"><span></span><p>Montage de dossiers bancables</p></div>
+                <div class="service-detail"><span></span><p>Accompagnement à la levée de fonds</p></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="zf-domaines">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">Domaines d'intervention</span>
+          <h2 class="section-title">Nos expertises en détail</h2>
+          <p class="section-subtitle">Cliquez sur un domaine pour dérouler le détail de notre accompagnement.</p>
+        </div>
+        <div class="accordion-stack">
+          <div class="accordion-item fade-up">
+            <button class="accordion-button" type="button" aria-expanded="false">
+              <div class="accordion-heading">
+                <span class="accordion-letter">A</span>
+                <span class="accordion-label">Audit et Certification</span>
+              </div>
+              <span class="chevron">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p class="accordion-text">ZFINANCES agit en tant que commissaire aux comptes, en vérifiant la régularité et la sincérité des états financiers. Ce rôle garantit aux actionnaires, partenaires et autorités que les comptes reflètent fidèlement la situation de l'entreprise.</p>
+              <p class="accordion-text">Le cabinet délivre une certification conforme aux normes de l'Ordre National des Experts Comptables (ONEC), renforçant la crédibilité et la conformité des états financiers.</p>
+              <p class="accordion-text">Analyse approfondie des flux financiers, des risques et des contrôles internes afin de proposer des recommandations pour améliorer la performance et la transparence.</p>
+            </div>
+          </div>
+          <div class="accordion-item fade-up">
+            <button class="accordion-button" type="button" aria-expanded="false">
+              <div class="accordion-heading">
+                <span class="accordion-letter">B</span>
+                <span class="accordion-label">Comptabilité Externalisée</span>
+              </div>
+              <span class="chevron">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p class="accordion-text">ZFINANCES prend en charge l'ensemble des opérations comptables (enregistrements, bilans, états financiers) pour les sociétés et associations, assurant une gestion fiable et conforme.</p>
+              <p class="accordion-text">Le cabinet propose des dispositifs sur mesure permettant aux organisations de déléguer leur comptabilité tout en gardant un suivi efficace et sécurisé.</p>
+            </div>
+          </div>
+          <div class="accordion-item fade-up">
+            <button class="accordion-button" type="button" aria-expanded="false">
+              <div class="accordion-heading">
+                <span class="accordion-letter">C</span>
+                <span class="accordion-label">Conseil en Finance et Gestion</span>
+              </div>
+              <span class="chevron">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p class="accordion-text">Accompagnement lors des opérations de fin d'exercice (bilan, compte de résultat, annexes), afin de garantir une clôture correcte et sans erreurs.</p>
+              <p class="accordion-text">Mise en place de procédures internes pour améliorer la gestion des ressources, réduire les coûts et renforcer l'efficacité organisationnelle.</p>
+            </div>
+          </div>
+          <div class="accordion-item fade-up">
+            <button class="accordion-button" type="button" aria-expanded="false">
+              <div class="accordion-heading">
+                <span class="accordion-letter">D</span>
+                <span class="accordion-label">Fiscalité et Conformité</span>
+              </div>
+              <span class="chevron">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p class="accordion-text">Vérification des pratiques fiscales de l'entreprise pour s'assurer qu'elles respectent la législation en vigueur et éviter les sanctions.</p>
+              <p class="accordion-text">Prise en charge de la préparation et du dépôt des déclarations fiscales, avec un suivi régulier pour garantir la conformité.</p>
+              <p class="accordion-text">Assistance et représentation auprès de l'administration fiscale en cas de contrôle ou litige.</p>
+            </div>
+          </div>
+          <div class="accordion-item fade-up">
+            <button class="accordion-button" type="button" aria-expanded="false">
+              <div class="accordion-heading">
+                <span class="accordion-letter">E</span>
+                <span class="accordion-label">Ressources Humaines et Paie</span>
+              </div>
+              <span class="chevron">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p class="accordion-text">Élaboration des bulletins de paie et calcul des indemnités de départ ou de fin de contrat, en conformité avec la législation.</p>
+              <p class="accordion-text">Conception de grilles salariales et hiérarchiques adaptées, favorisant une gestion équitable des ressources humaines.</p>
+              <p class="accordion-text">Création d'un cadre réglementaire interne pour encadrer les relations de travail et assurer un climat social harmonieux.</p>
+            </div>
+          </div>
+          <div class="accordion-item fade-up">
+            <button class="accordion-button" type="button" aria-expanded="false">
+              <div class="accordion-heading">
+                <span class="accordion-letter">F</span>
+                <span class="accordion-label">Accompagnement aux Investissements</span>
+              </div>
+              <span class="chevron">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p class="accordion-text">Élaboration, soumission et défense des dossiers de demande d'agrément au code des investissements auprès de l'ANAPI.</p>
+              <p class="accordion-text">Conception des dossiers de demande de financement auprès des institutions financières habilitées à octroyer des fonds.</p>
+            </div>
+          </div>
+          <div class="accordion-item fade-up">
+            <button class="accordion-button" type="button" aria-expanded="false">
+              <div class="accordion-heading">
+                <span class="accordion-letter">G</span>
+                <span class="accordion-label">Formation et Renforcement des Capacités</span>
+              </div>
+              <span class="chevron">▾</span>
+            </button>
+            <div class="accordion-content">
+              <p class="accordion-text">Organisation de formations pratiques en comptabilité, fiscalité et gestion des ressources humaines pour améliorer les compétences du personnel.</p>
+              <p class="accordion-text">Conception de modules personnalisés répondant aux besoins spécifiques des entreprises ou institutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-bg-white">
+      <div class="container">
+        <div class="approach-band fade-up">
+          <img src="assets/cabinet/reunion.jpg" alt="Réunion de travail — cabinet Zfinances, Kinshasa">
+          <div class="approach-content">
+            <span class="eyebrow">Notre approche</span>
+            <h2 class="section-title">Des décisions financières éclairées, fondées sur la donnée</h2>
+            <p class="approach-lead">De la tenue comptable au conseil stratégique, nous transformons vos chiffres en leviers de croissance avec la même exigence que les plus grandes institutions financières.</p>
+            <div class="approach-grid">
+              <div class="approach-stat"><div class="approach-number">+30</div><div class="approach-label">Secteurs couverts</div></div>
+              <div class="approach-stat"><div class="approach-number">98%</div><div class="approach-label">Clients fidèles</div></div>
+              <div class="approach-stat"><div class="approach-number">24h</div><div class="approach-label">Délai de réponse</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zf-about">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">À propos</span>
+          <h2 class="section-title">À propos de Zfinances</h2>
+          <p class="section-subtitle">Un cabinet d'expertise comptable, d'audit et de conseil fiscal au service du développement des entreprises en République Démocratique du Congo.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-box fade-up">
+            <div class="about-highlight">
+              <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+              <h3 class="about-heading">Historique du cabinet</h3>
+            </div>
+            <p>Créé en 2015, notre cabinet comptable est né de la volonté d'apporter aux entreprises un accompagnement fiable et personnalisé dans la gestion de leurs obligations comptables, fiscales et financières.</p>
+            <p>Au fil des années, nous avons su bâtir une réputation fondée sur la rigueur, la transparence et la proximité avec nos clients. Notre expertise s'est progressivement élargie, passant de la tenue de la comptabilité et du commissariat aux comptes à des services plus complets tels que :</p>
+            <div class="bullet-list">
+              <div class="bullet-item"><span></span><span>Le conseil en finance et gestion</span></div>
+              <div class="bullet-item"><span></span><span>L'accompagnement fiscal</span></div>
+              <div class="bullet-item"><span></span><span>La gestion des ressources humaines</span></div>
+              <div class="bullet-item"><span></span><span>La préparation des dossiers d'investissement et de financement</span></div>
+              <div class="bullet-item"><span></span><span>La formation des cadres et agents</span></div>
+            </div>
+          </div>
+          <div class="about-box fade-up">
+            <div class="about-highlight">
+              <span><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
+              <h3 class="about-heading">Nos valeurs</h3>
+            </div>
+            <div class="about-values-grid">
+              <div class="value-card">
+                <div class="value-header">
+                  <span class="value-number">01</span>
+                  <h4>Rigueur et professionnalisme</h4>
+                </div>
+                <p>Les méthodes utilisées par notre cabinet sont conformes aux normes internationales afin de garantir la fiabilité de nos travaux. Une attention particulière est accordée à chacune de nos missions afin de garantir des résultats irréprochables.</p>
+              </div>
+              <div class="value-card">
+                <div class="value-header">
+                  <span class="value-number">02</span>
+                  <h4>Confidentialité et sécurité</h4>
+                </div>
+                <p>La protection des informations financières et fiscales de nos clients est une priorité absolue. Vous pouvez donc nous confier vos dossiers en toute sérénité.</p>
+              </div>
+              <div class="value-card">
+                <div class="value-header">
+                  <span class="value-number">03</span>
+                  <h4>Proximité et accompagnement</h4>
+                </div>
+                <p>Notre équipe reste disponible et à l'écoute pour comprendre vos besoins spécifiques et vous proposer des solutions adaptées. Nous privilégions une approche humaine et proactive, afin de vous accompagner à chaque étape de votre développement.</p>
+              </div>
+              <div class="value-card">
+                <div class="value-header">
+                  <span class="value-number">04</span>
+                  <h4>Solutions adaptées</h4>
+                </div>
+                <p>Chaque entreprise étant unique, nous mettons en place des solutions sur mesure en tenant compte de votre secteur d'activité, de vos objectifs et de vos contraintes — comptabilité, fiscalité, ressources humaines ou financement — pour atteindre vos ambitions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-divider fade-up">
+          <div class="trust-block-header">
+            <span class="trust-block-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg></span>
+            <h3 class="trust-block-title">Pourquoi nous faire confiance</h3>
+          </div>
+          <div class="trust-split">
+            <div class="fade-up trust-image-wrap">
+              <img class="trust-image" src="assets/cabinet/dossiers.jpg" alt="Dossiers clients — cabinet Zfinances">
+              <div class="trust-float-badge">
+                <div class="trust-float-number">15+</div>
+                <div class="trust-float-text">années à accompagner les entreprises de Kinshasa</div>
+              </div>
+            </div>
+            <div class="fade-up fade-delay-12">
+              <span class="eyebrow eyebrow--blue">Notre mission</span>
+              <h4 class="mission-title">Une équipe engagée pour votre sérénité</h4>
+              <p class="mission-text">Fort d'une expertise en audit, conseil et gestion, notre cabinet met à votre disposition une équipe de professionnels engagés, rigoureux et disponibles. Notre mission est de vous garantir la conformité, la transparence et la sérénité dans la gestion de vos affaires.</p>
+              <div class="qualities-grid">
+                <div class="quality-cell">
+                  <span class="quality-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span>
+                  <div><h4 class="quality-title">Rigueur</h4><p class="quality-desc">Respect strict des normes professionnelles.</p></div>
+                </div>
+                <div class="quality-cell">
+                  <span class="quality-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                  <div><h4 class="quality-title">Proximité</h4><p class="quality-desc">Un interlocuteur dédié et à l'écoute.</p></div>
+                </div>
+                <div class="quality-cell">
+                  <span class="quality-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+                  <div><h4 class="quality-title">Réactivité</h4><p class="quality-desc">Réponses rapides, délais respectés.</p></div>
+                </div>
+                <div class="quality-cell">
+                  <span class="quality-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
+                  <div><h4 class="quality-title">Transparence</h4><p class="quality-desc">Honoraires clairs, reporting régulier.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zf-team">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">Le cabinet</span>
+          <h2 class="section-title">Une équipe d'experts à vos côtés</h2>
+          <p class="section-subtitle">Des professionnels reconnus de la comptabilité, de l'audit et de la fiscalité en République Démocratique du Congo.</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card fade-up">
+            <img src="assets/team/leki.jpg" alt="Leki MUYEKA">
+            <div class="team-card-content">
+              <h3>Leki MUYEKA</h3>
+              <div class="team-role">Managing Partner</div>
+              <p>Expert-comptable agréé, plus de 30 ans d'expérience en finances, comptabilité, fiscalité et gestion. A exercé au sein du CRS et de MSF Suisse, puis accompagné de nombreuses entreprises comme consultant et formateur. Commissaire aux comptes.</p>
+            </div>
+          </article>
+          <article class="team-card fade-up">
+            <img src="assets/team/arly.jpg" alt="Arly ZAGABE">
+            <div class="team-card-content">
+              <h3>Arly ZAGABE</h3>
+              <div class="team-role">Expert finance & gouvernance</div>
+              <p>20 ans d'expérience en finance et comptabilité. Postes de direction chez Bralima, Cimenterie de Lukala, Texaf, Ascoma et Pactilis RDC. Master en Sciences de gestion; accompagne les entreprises sur la performance et la stratégie financière.</p>
+            </div>
+          </article>
+          <article class="team-card fade-up">
+            <img src="assets/team/guylain.jpg" alt="Guylain KINVUKA">
+            <div class="team-card-content">
+              <h3>Guylain KINVUKA</h3>
+              <div class="team-role">Comptable</div>
+              <p>Master en sciences économiques et administratives (IRD Congo/Kinshasa). 3 ans en comptabilité, 2 ans en audit, 4 ans en fiscalité déclarative. Dynamique, adaptable et rigoureux.</p>
+            </div>
+          </article>
+          <article class="team-card fade-up">
+            <img src="assets/team/merveil.jpg" alt="Merveil MBUYI ONESIME">
+            <div class="team-card-content">
+              <h3>Merveil MBUYI ONESIME</h3>
+              <div class="team-role">Analyst Audit · Audit & Assurance</div>
+              <p>Diplômé en Gestion financière (Université de Kinshasa). Expérience en audit, conseil et commissariat aux comptes acquise notamment chez Deloitte. Missions pour entreprises, ONG et institutions financières en RDC et à l'international.</p>
+            </div>
+          </article>
+          <article class="team-card fade-up">
+            <img src="assets/team/fiston.jpg" alt="Fiston KAZANGA">
+            <div class="team-card-content">
+              <h3>Fiston KAZANGA</h3>
+              <div class="team-role">Comptable fiscaliste · Assistant auditeur</div>
+              <p>Licence en Économie Publique. Expérience en comptabilité, fiscalité et audit financier. Maîtrise des opérations comptables, déclarations fiscales et sociales et du contrôle interne. Rigoureux et méthodique.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-divider fade-up">
+          <div class="skills-header">
+            <span class="eyebrow">Expertises phares</span>
+            <h3 class="skills-title">Les compétences clés portées par notre équipe</h3>
+          </div>
+          <div class="grid-3">
+            <div class="value-card fade-up">
+              <div class="skill-card-header">
+                <span class="skill-letter">A</span>
+                <h4>Fiscalité & Conformité</h4>
+              </div>
+              <div class="check-list">
+                <div class="check-item"><span></span><span>Audit fiscal et conformité déclarative</span></div>
+                <div class="check-item"><span></span><span>Suivi des déclarations périodiques</span></div>
+                <div class="check-item"><span></span><span>Représentation en cas de contrôle</span></div>
+              </div>
+            </div>
+            <div class="value-card fade-up">
+              <div class="skill-card-header">
+                <span class="skill-letter">B</span>
+                <h4>Ressources Humaines & Paie</h4>
+              </div>
+              <div class="check-list">
+                <div class="check-item"><span></span><span>Gestion de la paie et calcul des soldes</span></div>
+                <div class="check-item"><span></span><span>Grilles de classification des emplois</span></div>
+                <div class="check-item"><span></span><span>Règlement d'ordre intérieur et conformité RH</span></div>
+              </div>
+            </div>
+            <div class="value-card fade-up">
+              <div class="skill-card-header">
+                <span class="skill-letter">C</span>
+                <h4>Accompagnement aux Investissements</h4>
+              </div>
+              <div class="check-list">
+                <div class="check-item"><span></span><span>Dossiers d'agrément ANAPI et subventions</span></div>
+                <div class="check-item"><span></span><span>Montage de dossiers bancables</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zf-trust" class="trust-section">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow eyebrow--light">Références clients</span>
+          <h2 class="section-title">Ils nous font confiance</h2>
+          <p class="section-subtitle section-subtitle--light">Des PME aux grands groupes, plus de 200 organisations s'appuient sur Zfinances pour leur comptabilité, leur audit et leur conseil fiscal.</p>
+        </div>
+      </div>
+      <div class="marquee fade-up">
+        <div class="marquee-track">
+          <div class="marquee-item"><img src="assets/logos/infobip.png" alt="Infobip"></div>
+          <div class="marquee-item"><img src="assets/logos/standard.png" alt="Standard Telecom"></div>
+          <div class="marquee-item"><img src="assets/logos/sfa.png" alt="SFA"></div>
+          <div class="marquee-item"><img src="assets/logos/pygma.png" alt="Pygma Communication"></div>
+          <div class="marquee-item"><img src="assets/logos/pactilis.png" alt="Pactilis"></div>
+          <div class="marquee-item"><img src="assets/logos/utex.png" alt="UTEX"></div>
+          <div class="marquee-item"><img src="assets/logos/texaf.png" alt="Texaf Bilembo"></div>
+          <div class="marquee-item"><img src="assets/logos/wiko.png" alt="Wiko"></div>
+          <div class="marquee-item"><img src="assets/logos/ascoma.png" alt="Ascoma"></div>
+          <div class="marquee-item"><img src="assets/logos/amigo.png" alt="Amigo Foods"></div>
+          <div class="marquee-item"><img src="assets/logos/carrigres.png" alt="Carrigres"></div>
+          <div class="marquee-item"><img src="assets/logos/infobip.png" alt="Infobip"></div>
+          <div class="marquee-item"><img src="assets/logos/standard.png" alt="Standard Telecom"></div>
+          <div class="marquee-item"><img src="assets/logos/sfa.png" alt="SFA"></div>
+        </div>
+      </div>
+      <div class="marquee marquee-row fade-up marquee--offset">
+        <div class="marquee-track">
+          <div class="marquee-item"><img src="assets/logos/pygma.png" alt="Pygma Communication"></div>
+          <div class="marquee-item"><img src="assets/logos/pactilis.png" alt="Pactilis"></div>
+          <div class="marquee-item"><img src="assets/logos/utex.png" alt="UTEX"></div>
+          <div class="marquee-item"><img src="assets/logos/texaf.png" alt="Texaf Bilembo"></div>
+          <div class="marquee-item"><img src="assets/logos/wiko.png" alt="Wiko"></div>
+          <div class="marquee-item"><img src="assets/logos/ascoma.png" alt="Ascoma"></div>
+          <div class="marquee-item"><img src="assets/logos/amigo.png" alt="Amigo Foods"></div>
+          <div class="marquee-item"><img src="assets/logos/carrigres.png" alt="Carrigres"></div>
+          <div class="marquee-item"><img src="assets/logos/infobip.png" alt="Infobip"></div>
+          <div class="marquee-item"><img src="assets/logos/standard.png" alt="Standard Telecom"></div>
+          <div class="marquee-item"><img src="assets/logos/sfa.png" alt="SFA"></div>
+          <div class="marquee-item"><img src="assets/logos/pygma.png" alt="Pygma Communication"></div>
+        </div>
+      </div>
+      <div class="container trust-clients-wrap">
+        <div class="grid-4 fade-up trust-clients-grid">
+          <div class="trust-card">
+            <div class="trust-category">Tenue comptable</div>
+            <div class="trust-client-list">INFOBIP<br>REDITECH<br>TEXAF BILEMBO<br>WIKO<br>SPLITTI · MAFRALAND</div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-category">Ressources humaines</div>
+            <div class="trust-client-list">INFOBIP<br>OADC<br>WIOCC<br>ASCOMA<br>PACTILIS</div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-category">Projets d'investissement</div>
+            <div class="trust-client-list">MSALABS<br>ABC<br>MAFRALAND<br>AMIGO FOODS<br>NURAN</div>
+          </div>
+          <div class="trust-card">
+            <div class="trust-category">Conseil fiscal</div>
+            <div class="trust-client-list">UTEXAFRICA · IMMOTEX<br>COTEX · CARRIGRES<br>STANDARD TELECOM<br>GROUPE PYGMA · SFA<br>CTG · IPP · CJIC</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-band">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stats-band-card fade-up"><div class="stats-band-number"><span class="count" data-target="50">+50</span></div><div class="stats-band-label">Clients accompagnés</div></div>
+          <div class="stats-band-card fade-up fade-delay-08"><div class="stats-band-number"><span class="count" data-target="15">+15</span></div><div class="stats-band-label">Ans d'expérience</div></div>
+          <div class="stats-band-card fade-up fade-delay-16"><div class="stats-band-number"><span class="count" data-target="30">+30</span></div><div class="stats-band-label">Secteurs d'activité</div></div>
+          <div class="stats-band-card fade-up fade-delay-24"><div class="stats-band-number"><span class="count" data-target="98">98%</span></div><div class="stats-band-label">Taux de satisfaction</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zf-actualites">
+      <div class="container">
+        <div class="section-header fade-up section-header--left">
+          <span class="eyebrow">Actualités</span>
+          <h2 class="section-title">Finance & Fiscalité en RDC</h2>
+          <p class="section-subtitle">Décryptage des réformes et de l'actualité fiscale congolaise par ZFINANCES.</p>
+        </div>
+        <div class="articles-grid">
+          <article class="article-card fade-up" data-article="irpp">
+            <img src="assets/news/news-irpp.jpg" alt="Réforme IRPP">
+            <div class="article-body">
+              <span class="article-tag">Réforme fiscale</span>
+              <span class="article-date">Analyse</span>
+              <h3>La réforme de l'Impôt sur le Revenu des Personnes Physiques (IRPP)</h3>
+              <p>Analyse des impacts et perspectives de la réforme de l'IRPP en RDC et de ses conséquences pour les contribuables et les entreprises.</p>
+            </div>
+          </article>
+          <article class="article-card fade-up" data-article="facture">
+            <img src="assets/news/news-facture.jpg" alt="Facture généralisée">
+            <div class="article-body">
+              <span class="article-tag">DGI</span>
+              <span class="article-date">12 nov. 2025</span>
+              <h3>DGI : la réforme de la facture généralisée entre en phase finale</h3>
+              <p>La DGI fait entrer le déploiement de la facture normalisée en RDC dans sa phase finale. Anticipez votre mise en conformité.</p>
+            </div>
+          </article>
+          <article class="article-card fade-up" data-article="modernisation">
+            <img src="assets/news/news-modernisation.jpg" alt="Modernisation du système fiscal">
+            <div class="article-body">
+              <span class="article-tag">Politique fiscale</span>
+              <span class="article-date">15 sept. 2025</span>
+              <h3>Modernisation du système fiscal congolais : campagne sur deux nouveaux impôts</h3>
+              <p>La Première Ministre lance la campagne de sensibilisation sur l'instauration de deux nouveaux impôts, une étape majeure de modernisation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-backdrop" id="articleModal" role="dialog" aria-modal="true">
+      <div class="modal">
+        <button class="modal-close" id="modalClose" aria-label="Fermer">×</button>
+        <div class="modal-image">
+          <img src="assets/news/news-irpp.jpg" alt="Article détaillé" id="modalImage">
+          <div class="modal-heading">
+            <span class="article-tag" id="modalTag">Réforme fiscale</span>
+            <h2 id="modalTitle">Titre de l'article</h2>
+          </div>
+        </div>
+        <div class="modal-body">
+          <span id="modalDate">Analyse</span>
+          <div id="modalContent"></div>
+          <div class="modal-source">
+            <p>Source officielle</p>
+            <a class="modal-source-link" href="#" target="_blank" id="modalSourceLink">Voir la source</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="zf-contact">
+      <div class="container">
+        <div class="contact-section fade-up">
+          <div class="contact-card">
+            <span class="eyebrow">Contact</span>
+            <h2 class="section-title contact-title">Parlons de votre projet</h2>
+            <p class="section-subtitle contact-subtitle">Remplissez le formulaire et nous vous recontacterons sous 24h ouvrées.</p>
+            <form id="contactForm" action="../../../src/api/api_accueil.php" method="POST">
+              <div class="field-row">
+                <div class="field"><label>Nom complet *</label><input name="nom" placeholder="Jean kadima" required></div>
+                <div class="field"><label>Email *</label><input name="email" type="email" placeholder="jeankadima@exemple.cd" required></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label>Téléphone</label><input name="telephone" type="tel" placeholder="+243 ..."></div>
+                <div class="field"><label>Sujet *</label><select name="sujet" required>
+                    <option value="">Sélectionner un service</option>
+                    <option value="comptabilite">Expertise Comptable</option>
+                    <option value="audit">Audit Financier</option>
+                    <option value="fiscal">Conseil Fiscal</option>
+                    <option value="juridique">Conseil Juridique</option>
+                    <option value="paie">Gestion de Paie</option>
+                    <option value="entrepreneurial">Accompagnement</option>
+                    <option value="autre">Autre</option>
+                  </select></div>
+              </div>
+              <div class="field"><label>Message *</label><textarea name="message" placeholder="Décrivez votre besoin..." required></textarea></div>
+              <button class="form-submit" type="submit">Envoyer le message</button>
+              <div class="form-note is-hidden" id="formSent">✓ Votre message a été envoyé ! Nous vous recontacterons sous 24h ouvrées.</div>
+            </form>
+          </div>
+          <aside class="contact-details">
+            <div class="contact-info-box">
+              <h3>Nos informations</h3>
+              <p>Contactez-nous directement par téléphone ou email.</p>
+              <div class="contact-list">
+                <div class="contact-item">
+                  <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9999FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+                  <div><strong class="contact-label">Adresse</strong><span class="contact-value">Concession Cotex n°63, Av. Col. Mondjiba, C/Ngaliema — Kinshasa, RDC</span></div>
+                </div>
+                <div class="contact-item">
+                  <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9999FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-1.84a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+                  <div><strong class="contact-label">Téléphone</strong><a class="contact-link" href="tel:+243858514660">+243 858 514 660</a></div>
+                </div>
+                <div class="contact-item">
+                  <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9999FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
+                  <div><strong class="contact-label">Email</strong><a class="contact-link" href="mailto:l.muyeka@zfinances.com">l.muyeka@zfinances.com</a></div>
+                </div>
+              </div>
+              <div class="contact-hours">
+                <div><strong>Lun – Ven</strong><span>8h00 – 17h00</span></div>
+                <div><strong>Samedi</strong><span>Sur rendez-vous</span></div>
+                <div><strong>Dimanche</strong><span>Fermé</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="zf-infos" class="info-section">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">Coordonnées & Enregistrements</span>
+          <h2 class="section-title">Informations légales & coordonnées</h2>
+          <p class="section-subtitle">Cabinet d'expertise comptable, d'audit et de conseil fiscal enregistré à Kinshasa, République Démocratique du Congo.</p>
+        </div>
+        <div class="info-grid fade-up">
+          <div class="info-card">
+            <div class="info-card-header">
+              <span class="info-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="15" y2="17"></line></svg></span>
+              <div>
+                <h3>Identité & enregistrements</h3>
+                <p class="info-card-subtitle">Références officielles de l'entreprise</p>
+              </div>
+            </div>
+            <dl>
+              <div><dt>RCCM</dt><dd>CD/KNG/RCCM/21-B-02914</dd></div>
+              <div><dt>Identification Nationale</dt><dd>01-H5300-N92747B</dd></div>
+              <div><dt>Numéro d'Impôt</dt><dd>A2283273P</dd></div>
+              <div><dt>Bureaux</dt><dd>Concession Cotex n°63, Av. Col. Mondjiba, C/Ngaliema — Kinshasa</dd></div>
+              <div><dt>Affiliations</dt><dd>CNSS : 1016251600 · INPP : 96388,00 · ONEM : 027002c21</dd></div>
+              <div><dt>Activités principales</dt><dd>Comptabilité, Audit, Fiscalité & Finances</dd></div>
+            </dl>
+          </div>
+          <div class="info-card info-card--accent">
+            <div class="info-card-header info-card-header--accent">
+              <span class="info-card-icon info-card-icon--light"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+              <div>
+                <h3>Coordonnées & contacts</h3>
+                <p class="info-card-subtitle info-card-subtitle--light">Nous joindre directement</p>
+              </div>
+            </div>
+            <dl>
+              <div><dt>Adresse officielle</dt><dd>Concession Cotex n°63, avenue Colonel Monjiba, Kinshasa, Ngaliema — RDC</dd></div>
+              <div><dt>Téléphone</dt><dd><a href="tel:+243858514660">+243 858 514 660</a></dd></div>
+              <div><dt>E-mail</dt><dd><a href="mailto:l.muyeka@zfinances.com">l.muyeka@zfinances.com</a></dd></div>
+            </dl>
+            <a class="info-cta" href="#zf-contact">Demander un rendez-vous</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="https://image.youmind.com/user-files/eebe4f28a1c7f3ce5132746a515a51ef427cc8493122627c398898d4b8feb61a?format=jpeg&width=4000&height=4000&fit=scale-down" alt="Zfinances">
+          <p class="footer-brand-text">Cabinet d'expertise comptable, d'audit financier et de fiscalité en RDC.</p>
+          <p class="footer-brand-text footer-brand-text--sm">Votre partenaire de confiance pour une gestion financière rigoureuse et optimisée.</p>
+          <p class="footer-quote">« Avec vous, dans votre équipe »</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="#zf-hero">Accueil</a>
+            <a href="#zf-services">Nos Services</a>
+            <a href="#zf-about">À Propos & Équipe</a>
+            <a href="#zf-actualites">Actualités</a>
+            <a href="#zf-infos">Coordonnées & infos légales</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <div class="footer-links">
+            <a href="#zf-services">Expertise Comptable</a>
+            <a href="#zf-services">Audit Financier</a>
+            <a href="#zf-services">Conseil Fiscal</a>
+            <a href="#zf-services">Gestion de Paie</a>
+          </div>
+        </div>
+        <div class="footer-newsletter">
+          <h4 class="footer-col-title">Newsletter</h4>
+          <p class="footer-newsletter-desc">Recevez nos actualités fiscales et comptables.</p>
+          <form id="newsletterForm">
+            <input type="email" placeholder="votre@email.cd" required>
+            <button type="submit">OK</button>
+          </form>
+          <p class="newsletter-sent is-hidden" id="newsletterSent">✓ Inscription confirmée !</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Zfinances — Cabinet d'expertise comptable. Tous droits réservés.</p>
+        <p>RCCM CD/KNG/RCCM/21-B-02914 · Id. Nat. 01-H5300-N92747B · N° Impôt A2283273P</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
