@@ -1,18 +1,47 @@
 <?php
-/**
- * Front controller — point d'entrée unique de l'application.
- * Toutes les requêtes passent ici (voir .htaccess).
- */
+session_start();
 
-use App\Core\App;
-use App\Core\Request;
-use App\Core\Router;
+$page = strtolower(trim($_GET['q'] ?? 'accueil'));
 
-require dirname(__DIR__) . '/app/Core/App.php';
+switch ($page) {
+    case 'admin':
+    case 'dashboard':
+        if (!empty($_SESSION['admin_logged'])) {
+            header('Location: assets/admin/dashboard.php');
+        } else {
+            header('Location: assets/admin/login.php');
+        }
+        exit;
 
-App::boot(dirname(__DIR__));
+    case 'login':
+        header('Location: assets/admin/login.php');
+        exit;
 
-$router = new Router();
-require dirname(__DIR__) . '/routes/web.php';
+    case 'logout':
+        header('Location: assets/admin/logout.php');
+        exit;
 
-$router->dispatch(new Request());
+    case 'accueil':
+    case 'home':
+    case '':
+        require __DIR__ . '/assets/pages/index.php';
+        break;
+
+    default:
+        http_response_code(404);
+        require __DIR__ . '/assets/pages/index.php';
+        break;
+}
+
+use Router\Router;
+
+require dirname(__DIR__). DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+
+Dotenv\Dotenv::createImmutable(dirname(__DIR__))->load();
+
+Router::Instance();
+
+require dirname(__DIR__). DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'web.php';
+require dirname(__DIR__). DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'api.php';
+
+Router::matcher();
