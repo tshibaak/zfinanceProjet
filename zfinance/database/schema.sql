@@ -1,40 +1,42 @@
--- Schéma de la base Zfinances
+-- Schema for Zfinances app
 CREATE DATABASE IF NOT EXISTS zfinance CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE zfinance;
 
--- Messages du formulaire de contact
+-- Contacts from contact form
 CREATE TABLE IF NOT EXISTS contacts (
-  id         INT AUTO_INCREMENT PRIMARY KEY,
-  nom        VARCHAR(255) NOT NULL,
-  email      VARCHAR(255) NOT NULL,
-  telephone  VARCHAR(50),
-  sujet      VARCHAR(150) NOT NULL,
-  message    TEXT NOT NULL,
-  statut     ENUM('lu','non_lu') NOT NULL DEFAULT 'non_lu',
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  telephone VARCHAR(50),
+  sujet VARCHAR(150) NOT NULL,
+  message TEXT NOT NULL,
+  statut ENUM('lu','non_lu') DEFAULT 'non_lu',
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
--- Abonnés newsletter
+-- Newsletter subscribers
 CREATE TABLE IF NOT EXISTS subscribers (
-  id         INT AUTO_INCREMENT PRIMARY KEY,
-  email      VARCHAR(255) NOT NULL UNIQUE,
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) NOT NULL UNIQUE,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
--- Témoignages
+-- Testimonials managed by admin
 CREATE TABLE IF NOT EXISTS testimonials (
-  id         INT AUTO_INCREMENT PRIMARY KEY,
-  author     VARCHAR(255) NOT NULL,
-  company    VARCHAR(255),
-  message    TEXT NOT NULL,
-  rating     TINYINT NOT NULL DEFAULT 5,
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  author VARCHAR(255) NOT NULL,
+  company VARCHAR(255),
+  message TEXT NOT NULL,
+  rating TINYINT NOT NULL DEFAULT 5,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
--- Comptes admin (mot de passe HASHÉ — voir database/seed.php)
-CREATE TABLE IF NOT EXISTS admin (
-  id         INT AUTO_INCREMENT PRIMARY KEY,
-  nameAdmin  VARCHAR(60) NOT NULL UNIQUE,
-  passAdmin  VARCHAR(255) NOT NULL,
+create table if not exists admin(
+  id int AUTO_INCREMENT primary key ,
+  nameAdmin VARCHAR(30) not null unique,
+  passAdmin VARCHAR(25) not null,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+
+insert ignore into admin(nameAdmin,passAdmin) values("admin","admin123");
