@@ -2,6 +2,7 @@
 
 namespace App\controllers;
 
+use Helper\Build\Database;
 use Router\Router;
 
 class AuthController extends Controller
@@ -18,8 +19,9 @@ class AuthController extends Controller
 
     public function login()
     {
+       require dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
-       require __DIR__ . '/../config/db.php';
+       $db = Database::Instance();
        
        $loginRedirect = '../../public/index.php?q=login';
        $adminRedirect = '../../public/index.php?q=admin';

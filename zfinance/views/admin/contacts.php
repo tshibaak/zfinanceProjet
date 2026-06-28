@@ -1,25 +1,12 @@
 <?php
-
-session_start();
-
-if(empty($_SESSION['admin_logged'])){
-    header('Location: login.php');
-    exit;
+if (!isset($contacts)) {
+    $contacts = [];
 }
-
-require __DIR__ . "/../../../src/config/db.php";
-
-$contacts = $db->query("
-    SELECT *
-    FROM contacts
-    ORDER BY created_at DESC
-")->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 <html>
 
 <head>
-    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
 
 <body>

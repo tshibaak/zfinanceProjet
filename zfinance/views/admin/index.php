@@ -1,32 +1,16 @@
 <?php
-
-session_start();
-
-if(empty($_SESSION['admin_logged'])){
-    header('Location: login.php');
-    exit;
+if (!isset($totalContacts)) {
+    $totalContacts = 0;
 }
-
-require __DIR__ . "/../../../src/config/db.php";
-
-$totalContacts = $db->query("
-SELECT COUNT(*) FROM contacts
-")->fetchColumn();
-
-$totalSubscribers = $db->query("
-SELECT COUNT(*) FROM subscribers
-")->fetchColumn();
-
-$totalTestimonials = $db->query("
-SELECT COUNT(*) FROM testimonials
-")->fetchColumn();
-
-$unread = $db->query("
-SELECT COUNT(*)
-FROM contacts
-WHERE statut='non_lu'
-")->fetchColumn();
-
+if (!isset($totalSubscribers)) {
+    $totalSubscribers = 0;
+}
+if (!isset($totalTestimonials)) {
+    $totalTestimonials = 0;
+}
+if (!isset($unread)) {
+    $unread = 0;
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +19,7 @@ WHERE statut='non_lu'
 <head>
     <meta charset="UTF-8">
     <title>Dashboard Admin</title>
-    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
 
 <body>
@@ -84,28 +68,28 @@ WHERE statut='non_lu'
         <div class="card">
             <h3>Messages Contact</h3>
             <div class="number">
-                <?= $totalContacts ?>
+                <?= $totalContacts ? $totalContacts : 0 ?>
             </div>
         </div>
 
         <div class="card">
             <h3>Newsletter</h3>
             <div class="number">
-                <?= $totalSubscribers ?>
+                <?= $totalSubscribers ? $totalSubscribers : 0 ?>
             </div>
         </div>
 
         <div class="card">
             <h3>Témoignages</h3>
             <div class="number">
-                <?= $totalTestimonials ?>
+                <?= $totalTestimonials ? $totalTestimonials : 0 ?>
             </div>
         </div>
 
         <div class="card">
             <h3>Messages non lus</h3>
             <div class="number">
-                <?= $unread ?>
+                <?= $unread ? $unread : 0 ?>
             </div>
         </div>
 

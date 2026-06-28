@@ -7,13 +7,13 @@ if(empty($_SESSION['admin_logged'])){
     exit;
 }
 
-require __DIR__ . "/../../../src/config/db.php";
+require __DIR__ . "/../../../vendor/autoload.php";
 
-$testimonials = $db->query("
-    SELECT *
-    FROM testimonials
-    ORDER BY created_at DESC
-")->fetchAll(PDO::FETCH_ASSOC);
+use Helper\Build\Database;
+
+$db = Database::Instance();
+
+$testimonials = $db->query("SELECT * FROM testimonials ORDER BY created_at DESC")->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 

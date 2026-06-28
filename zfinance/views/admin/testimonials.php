@@ -1,20 +1,7 @@
 <?php
-
-session_start();
-
-if(empty($_SESSION['admin_logged'])){
-    header('Location: login.php');
-    exit;
+if (!isset($testimonials)) {
+    $testimonials = [];
 }
-
-require __DIR__ . "/../../../src/config/db.php";
-
-$testimonials = $db->query("
-    SELECT *
-    FROM testimonials
-    ORDER BY created_at DESC
-")->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 <!DOCTYPE html>
