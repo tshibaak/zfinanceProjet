@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        View::view('index');
+        // View::view('index');
     }
 
     public function contact(){
