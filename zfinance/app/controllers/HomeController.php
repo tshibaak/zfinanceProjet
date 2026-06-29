@@ -3,6 +3,7 @@
 namespace App\controllers;
 
 use App\View;
+use Helper\Build\Database;
 
 class HomeController extends Controller
 {
@@ -15,7 +16,9 @@ class HomeController extends Controller
     
 session_start();
 
-require __DIR__ . '/../config/db.php';
+require dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+
+$db = Database::Instance();
 
 $redirect = '../../public/index.php?q=accueil#zf-contact';
 
@@ -90,7 +93,9 @@ public function newsletter(){
 
 session_start();
 
-require __DIR__ . '/../config/db.php';
+require dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+
+$db = Database::Instance();
 
 $redirect = '../../public/index.php?q=accueil#zf-contact';
 

@@ -6,18 +6,16 @@ if(empty($_SESSION['admin_logged'])){
     exit;
 }
 
-require __DIR__ . "/../../../src/config/db.php";
+require __DIR__ . "/../../../vendor/autoload.php";
 
-$id = (int)$_GET['id'];
+use Helper\Build\Database;
 
-$stmt = $db->prepare("
-DELETE FROM contacts
-WHERE id = :id
-");
+$db = Database::Instance();
 
-$stmt->execute([
-    ':id'=>$id
-]);
+$id = (int) $_GET['id'];
+
+$stmt = $db->prepare("DELETE FROM contacts WHERE id = :id");
+$stmt->execute([':id' => $id]);
 
 header('Location: contacts.php');
 exit;

@@ -1,5 +1,5 @@
 -- Schema for Zfinances app
-CREATE DATABASE IF NOT EXISTS zfinance CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS zfinance;
 USE zfinance;
 
 -- Contacts from contact form

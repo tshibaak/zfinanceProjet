@@ -1,20 +1,8 @@
 <?php
-
-session_start();
-
-if(empty($_SESSION['admin_logged'])){
-    header('Location: login.php');
-    exit;
+if (!isset($subscribers)) {
+    $subscribers = [];
 }
-
-require __DIR__ . "/../../../src/config/db.php";
-
-$subs = $db->query("
-    SELECT *
-    FROM subscribers
-    ORDER BY created_at DESC
-")->fetchAll(PDO::FETCH_ASSOC);
-
+$subs = $subscribers;
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +11,7 @@ $subs = $db->query("
 <head>
     <meta charset="UTF-8">
     <title>Newsletter</title>
-    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
 
 <body>

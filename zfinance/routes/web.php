@@ -1,5 +1,6 @@
 <?php
 
+use App\controllers\AdminController;
 use App\controllers\HomeController;
 use App\View;
 use Router\Router;
@@ -11,8 +12,8 @@ Router::get('/login',function(){
 });
 
 
-Router::get('/admin/dashboard',[]);
-Router::get('/admin/contacts',[]);
-Router::get('/admin/newsletter',[]);
-Router::get('/admin/testimonials',[]);
+Router::get('/admin/dashboard',[AdminController::class,'index']);
+Router::get('/admin/contacts',[AdminController::class,'contacts']);
+Router::get('/admin/newsletter',[AdminController::class,'newsletter']);
+Router::get('/admin/testimonials',[AdminController::class,'testimonials']);
 ?>
