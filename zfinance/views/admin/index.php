@@ -19,7 +19,7 @@ if (!isset($unread)) {
 <head>
     <meta charset="UTF-8">
     <title>Dashboard Admin</title>
-    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../../public/assets/css/admin.css">
 </head>
 
 <body>

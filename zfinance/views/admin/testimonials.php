@@ -10,7 +10,7 @@ if (!isset($testimonials)) {
 <head>
     <meta charset="UTF-8">
     <title>Témoignages</title>
-    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="../../public/assets/css/admin.css">
 </head>
 
 <body>
