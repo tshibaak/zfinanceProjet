@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,12 +19,16 @@
       </a>
       <nav aria-label="Menu principal">
         <a class="nav-link" href="#zf-hero">Accueil</a>
-        <a class="nav-link" href="#zf-services">Nos services</a>
-        <a class="nav-link" href="#zf-about">À propos & équipe</a>
+        <a class="nav-link" href="#zf-services">Services</a>
+        <a class="nav-link" href="#zf-about">À propos</a>
+        <a class="nav-link" href="#zf-team">Équipe</a>
         <a class="nav-link" href="#zf-actualites">Actualités</a>
         <a class="nav-link" href="#zf-contact">Contact</a>
       </nav>
-      <a class="button-primary" href="#zf-contact">Rendez-vous</a>
+      <a class="button-primary" href="#zf-contact">
+        <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+        Rendez-vous
+      </a>
       <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -39,8 +45,9 @@
     </div>
     <nav class="drawer-nav" aria-label="Menu mobile">
       <a href="#zf-hero">Accueil</a>
-      <a href="#zf-services">Nos services</a>
-      <a href="#zf-about">À propos & équipe</a>
+      <a href="#zf-services">Services</a>
+      <a href="#zf-about">À propos</a>
+      <a href="#zf-team">Équipe</a>
       <a href="#zf-actualites">Actualités</a>
       <a href="#zf-contact">Contact</a>
     </nav>
@@ -65,8 +72,8 @@
           <span class="hero-badge-dot"></span>
           Expertise comptable & Audit financier
         </div>
-        <h1 class="hero-title fade-up">Votre réussite<br>financière,<br><span>notre expertise</span></h1>
-        <p class="hero-text fade-up">Nous accompagnons les entreprises en RDC dans leur développement en offrant des services de qualité en expertise comptable, conseil fiscal et gestion d'entreprise, ainsi qu'en représentation internationale.</p>
+        <h1 class="hero-title fade-up">Votre réussite<br class="hero-br"> financière,<br class="hero-br"> <span>notre expertise</span></h1>
+        <p class="hero-text fade-up">Nous accompagnons les entreprises en RDC avec des services fiables en expertise comptable, conseil fiscal, gestion d'entreprise et représentation internationale.</p>
         <p class="hero-quote fade-up">« Avec vous, dans votre équipe »</p>
         <div class="hero-actions fade-up">
           <a class="button-primary" href="#zf-services">Découvrir nos services</a>
@@ -87,22 +94,6 @@
           </div>
         </div>
       </div>
-      <div class="hero-bottom fade-up">
-        <div class="hero-caption" id="heroCaption">Votre partenaire de confiance</div>
-        <div class="hero-controls">
-          <div class="hero-dots" aria-label="Contrôles du carrousel">
-            <button class="hero-dot active" type="button" data-index="0" aria-label="Image 1"></button>
-            <button class="hero-dot" type="button" data-index="1" aria-label="Image 2"></button>
-            <button class="hero-dot" type="button" data-index="2" aria-label="Image 3"></button>
-            <button class="hero-dot" type="button" data-index="3" aria-label="Image 4"></button>
-            <button class="hero-dot" type="button" data-index="4" aria-label="Image 5"></button>
-          </div>
-          <div class="hero-arrows">
-            <button class="hero-arrow" type="button" data-action="prev" aria-label="Image précédente">◀</button>
-            <button class="hero-arrow" type="button" data-action="next" aria-label="Image suivante">▶</button>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section id="zf-services">
@@ -116,7 +107,7 @@
           <article class="service-card fade-up">
             <button type="button" class="service-toggle" aria-expanded="false">
               <div class="service-summary">
-                <div class="service-icon">&#128196;</div>
+                <div class="service-icon"><ion-icon name="document-text-outline" aria-hidden="true"></ion-icon></div>
                 <div class="service-body">
                   <h3>Expertise Comptable</h3>
                   <p>Tenue et révision de comptabilité, bilans et comptes de résultat, liasses fiscales et reporting financier.</p>
@@ -135,7 +126,7 @@
           <article class="service-card fade-up">
             <button type="button" class="service-toggle" aria-expanded="false">
               <div class="service-summary">
-                <div class="service-icon">&#128202;</div>
+                <div class="service-icon"><ion-icon name="bar-chart-outline" aria-hidden="true"></ion-icon></div>
                 <div class="service-body">
                   <h3>Audit Financier</h3>
                   <p>Audit légal et contractuel, commissariat aux comptes, certification des comptes annuels et audit d'acquisition.</p>
@@ -154,7 +145,7 @@
           <article class="service-card fade-up">
             <button type="button" class="service-toggle" aria-expanded="false">
               <div class="service-summary">
-                <div class="service-icon">&#128176;</div>
+                <div class="service-icon"><ion-icon name="cash-outline" aria-hidden="true"></ion-icon></div>
                 <div class="service-body">
                   <h3>Conseil Fiscal</h3>
                   <p>Optimisation fiscale, déclarations, accompagnement lors des contrôles fiscaux et veille réglementaire.</p>
@@ -173,7 +164,7 @@
           <article class="service-card fade-up">
             <button type="button" class="service-toggle" aria-expanded="false">
               <div class="service-summary">
-                <div class="service-icon">&#128202;</div>
+                <div class="service-icon"><ion-icon name="briefcase-outline" aria-hidden="true"></ion-icon></div>
                 <div class="service-body">
                   <h3>Conseil Juridique</h3>
                   <p>Création et transformation de sociétés, rédaction de statuts, pactes d'associés et restructurations.</p>
@@ -192,7 +183,7 @@
           <article class="service-card fade-up">
             <button type="button" class="service-toggle" aria-expanded="false">
               <div class="service-summary">
-                <div class="service-icon">&#128188;</div>
+                <div class="service-icon"><ion-icon name="people-outline" aria-hidden="true"></ion-icon></div>
                 <div class="service-body">
                   <h3>Gestion de Paie</h3>
                   <p>Externalisation complète de la paie, bulletins, déclarations sociales et accompagnement RH.</p>
@@ -211,7 +202,7 @@
           <article class="service-card fade-up">
             <button type="button" class="service-toggle" aria-expanded="false">
               <div class="service-summary">
-                <div class="service-icon">&#128200;</div>
+                <div class="service-icon"><ion-icon name="trending-up-outline" aria-hidden="true"></ion-icon></div>
                 <div class="service-body">
                   <h3>Accompagnement</h3>
                   <p>Business plan, prévisionnel financier, accompagnement à la levée de fonds et suivi de la performance.</p>
@@ -341,6 +332,7 @@
       <div class="container">
         <div class="approach-band fade-up">
           <img src="assets/cabinet/reunion.jpg" alt="Réunion de travail — cabinet Zfinances, Kinshasa">
+          <div class="approach-overlay"></div>
           <div class="approach-content">
             <span class="eyebrow">Notre approche</span>
             <h2 class="section-title">Des décisions financières éclairées, fondées sur la donnée</h2>
@@ -376,6 +368,12 @@
               <div class="bullet-item"><span></span><span>La gestion des ressources humaines</span></div>
               <div class="bullet-item"><span></span><span>La préparation des dossiers d'investissement et de financement</span></div>
               <div class="bullet-item"><span></span><span>La formation des cadres et agents</span></div>
+            </div>
+            <p>Aujourd'hui, notre cabinet se positionne comme un partenaire stratégique pour les entreprises de toutes tailles, en les aidant à relever leurs défis financiers et organisationnels dans un environnement économique en constante évolution.</p>
+            <p>Notre histoire est celle d'une croissance continue, portée par la confiance de nos clients et par l'engagement de notre équipe à offrir des solutions adaptées, innovantes et conformes aux normes les plus exigeantes.</p>
+            <div class="history-year">
+              <span class="history-year-number">2015</span>
+              <span class="history-year-label">année de création</span>
             </div>
           </div>
           <div class="about-box fade-up">
@@ -555,7 +553,7 @@
         <div class="section-header fade-up">
           <span class="eyebrow eyebrow--light">Références clients</span>
           <h2 class="section-title">Ils nous font confiance</h2>
-          <p class="section-subtitle section-subtitle--light">Des PME aux grands groupes, plus de 200 organisations s'appuient sur Zfinances pour leur comptabilité, leur audit et leur conseil fiscal.</p>
+          <p class="section-subtitle section-subtitle--light">Des PME aux grands groupes, plus de 50 organisations s'appuient sur Zfinances pour leur comptabilité, leur audit et leur conseil fiscal.</p>
         </div>
       </div>
       <div class="marquee fade-up">
@@ -743,50 +741,6 @@
         </div>
       </div>
     </section>
-
-    <section id="zf-infos" class="info-section">
-      <div class="container">
-        <div class="section-header fade-up">
-          <span class="eyebrow">Coordonnées & Enregistrements</span>
-          <h2 class="section-title">Informations légales & coordonnées</h2>
-          <p class="section-subtitle">Cabinet d'expertise comptable, d'audit et de conseil fiscal enregistré à Kinshasa, République Démocratique du Congo.</p>
-        </div>
-        <div class="info-grid fade-up">
-          <div class="info-card">
-            <div class="info-card-header">
-              <span class="info-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="15" y2="17"></line></svg></span>
-              <div>
-                <h3>Identité & enregistrements</h3>
-                <p class="info-card-subtitle">Références officielles de l'entreprise</p>
-              </div>
-            </div>
-            <dl>
-              <div><dt>RCCM</dt><dd>CD/KNG/RCCM/21-B-02914</dd></div>
-              <div><dt>Identification Nationale</dt><dd>01-H5300-N92747B</dd></div>
-              <div><dt>Numéro d'Impôt</dt><dd>A2283273P</dd></div>
-              <div><dt>Bureaux</dt><dd>Concession Cotex n°63, Av. Col. Mondjiba, C/Ngaliema — Kinshasa</dd></div>
-              <div><dt>Affiliations</dt><dd>CNSS : 1016251600 · INPP : 96388,00 · ONEM : 027002c21</dd></div>
-              <div><dt>Activités principales</dt><dd>Comptabilité, Audit, Fiscalité & Finances</dd></div>
-            </dl>
-          </div>
-          <div class="info-card info-card--accent">
-            <div class="info-card-header info-card-header--accent">
-              <span class="info-card-icon info-card-icon--light"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
-              <div>
-                <h3>Coordonnées & contacts</h3>
-                <p class="info-card-subtitle info-card-subtitle--light">Nous joindre directement</p>
-              </div>
-            </div>
-            <dl>
-              <div><dt>Adresse officielle</dt><dd>Concession Cotex n°63, avenue Colonel Monjiba, Kinshasa, Ngaliema — RDC</dd></div>
-              <div><dt>Téléphone</dt><dd><a href="tel:+243858514660">+243 858 514 660</a></dd></div>
-              <div><dt>E-mail</dt><dd><a href="mailto:l.muyeka@zfinances.com">l.muyeka@zfinances.com</a></dd></div>
-            </dl>
-            <a class="info-cta" href="#zf-contact">Demander un rendez-vous</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -803,9 +757,10 @@
           <div class="footer-links">
             <a href="#zf-hero">Accueil</a>
             <a href="#zf-services">Nos Services</a>
-            <a href="#zf-about">À Propos & Équipe</a>
+            <a href="#zf-about">À Propos</a>
+            <a href="#zf-team">Équipe</a>
             <a href="#zf-actualites">Actualités</a>
-            <a href="#zf-infos">Coordonnées & infos légales</a>
+            <a href="#zf-contact">Contact</a>
           </div>
         </div>
         <div>
