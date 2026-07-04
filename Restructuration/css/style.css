@@ -95,11 +95,11 @@ textarea {
 }
 
 .brand img {
-  height: 38px;
+  height: 60px;
   width: auto;
   display: block;
   background: #fff;
-  padding: 4px 6px;
+  padding: 4px 8px;
   border-radius: 6px;
 }
 
@@ -759,30 +759,31 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .team-card {
-  display: grid;
-  background: #fff;
-  border-radius: 24px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
 }
+
 
 .team-card img {
   width: 100%;
-  height: 230px;
-  object-fit: cover;
-  object-position: center top;
+  height: 250px; 
+  object-fit: cover; 
 }
 
 .team-card-content {
-  padding: 20px 22px;
-  border-top: 3px solid var(--blue);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
 }
 
-.team-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 6px;
+.team-card-content h3 {
+  margin-top: 15px; 
 }
 
 .team-role {
@@ -2209,6 +2210,40 @@ footer {
   background: var(--blue);
   border: none;
 }
+
+.slogan-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh; /* S'intègre naturellement entre l'accueil et les services */
+  background: var(--surface); /* Garde la cohérence avec le fond général */
+  padding: 60px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.slogan-page .slogan-logo {
+  height: 160px; /* Agrandissement du logo (anciennement 100px) */
+  width: auto;
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 10px 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 102, 0.05);
+  object-fit: contain; /* Assure que le logo ne soit pas déformé */
+}
+
+.slogan-page h3 {
+  font-size: clamp(1.4rem, 3vw, 2rem); /* Diminution du texte (anciennement jusqu'à 2.8rem) */
+  font-weight: 700;
+  color: var(--blue-dark);
+  max-width: 700px;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
 
 @media (max-width: 900px) {
   .nav-link,
