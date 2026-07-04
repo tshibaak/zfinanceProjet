@@ -775,6 +775,14 @@ section {
   object-fit: cover; 
 }
 
+.team-card--portrait img {
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+  background: #f4f4ff;
+  padding: 8px;
+}
+
 .team-card-content {
   padding: 24px;
   display: flex;
@@ -2217,25 +2225,25 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 70vh; /* S'intègre naturellement entre l'accueil et les services */
-  background: var(--surface); /* Garde la cohérence avec le fond général */
-  padding: 60px 24px;
+  min-height: 34vh;
+  background: var(--surface);
+  padding: 28px 24px;
   border-bottom: 1px solid var(--border);
 }
 
 .slogan-page .slogan-logo {
-  height: 160px; /* Agrandissement du logo (anciennement 100px) */
+  height: 220px;
   width: auto;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   background: #fff;
-  padding: 10px 24px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 102, 0.05);
-  object-fit: contain; /* Assure que le logo ne soit pas déformé */
+  padding: 12px 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0, 0, 102, 0.06);
+  object-fit: contain;
 }
 
 .slogan-page h3 {
-  font-size: clamp(1.4rem, 3vw, 2rem); /* Diminution du texte (anciennement jusqu'à 2.8rem) */
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
   font-weight: 700;
   color: var(--blue-dark);
   max-width: 700px;
