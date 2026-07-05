@@ -841,32 +841,45 @@ section {
   position: relative;
   overflow: hidden;
   margin-top: 40px;
-  mask-image: linear-gradient(
-    90deg,
-    transparent 7%,
-    black 15%,
-    black 85%,
-    transparent 93%
-  );
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent 7%,
-    black 15%,
-    black 85%,
-    transparent 93%
-  );
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
 }
 
 .marquee-track {
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: marquee 50s linear infinite;
+  will-change: transform;
 }
 
-.marquee-row:nth-of-type(2) .marquee-track {
-  animation-direction: reverse;
-  animation-duration: 58s;
+.marquee-track[data-direction="right"] {
+  animation: marquee-right linear infinite;
+}
+
+.marquee-track[data-direction="left"] {
+  animation: marquee-left linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee-item {
@@ -2250,6 +2263,39 @@ footer {
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin: 0;
+}
+
+.slogan-inner {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 36px;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.slogan-media .slogan-logo {
+  height: 180px;
+  padding: 10px 20px;
+}
+
+.slogan-copy .slogan-lead {
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 680px;
+}
+
+@media (max-width: 900px) {
+  .slogan-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .slogan-media {
+    order: 1;
+  }
+  .slogan-copy {
+    order: 2;
+  }
 }
 
 

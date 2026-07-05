@@ -88,17 +88,87 @@
     }
 
     function handleCount(el) {
-      const target = parseInt(el.dataset.target, 10) || 0;
-      const start = performance.now();
-      const duration = 1600;
-      function step(now) {
-        const progress = Math.min(1, (now - start) / duration);
-        const value = Math.round(target * progress);
-        el.textContent = target >= 100 ? `${value}%` : `+${value}`;
-        if (progress < 1) requestAnimationFrame(step);
-        else el.textContent = target >= 100 ? `${target}%` : `+${target}`;
+          const target = parseInt(el.dataset.target, 10) || 0;
+          const unit = el.dataset.unit || '';
+          const start = performance.now();
+          const duration = 1600;
+          function step(now) {
+            const progress = Math.min(1, (now - start) / duration);
+            const value = Math.round(target * progress);
+            if (unit) {
+              el.textContent = `+${value}${unit}`;
+            } else {
+              el.textContent = target >= 100 ? `${value}%` : `+${value}`;
+            }
+            if (progress < 1) requestAnimationFrame(step);
+            else {
+              if (unit) el.textContent = `+${target}${unit}`;
+              else el.textContent = target >= 100 ? `${target}%` : `+${target}`;
+            }
+          }
+          requestAnimationFrame(step);
+    }
+
+    function setupMarqueeTrack(track, logos) {
+      if (!track || !logos.length) return;
+      const wrapper = track.parentElement;
+      const createLogoItem = ({ src, alt }) => {
+        const item = document.createElement('div');
+        item.className = 'marquee-item';
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = alt;
+        item.appendChild(img);
+        return item;
+      };
+
+      const fragment = document.createDocumentFragment();
+      logos.forEach(logo => fragment.appendChild(createLogoItem(logo)));
+      const baseItems = Array.from(fragment.childNodes);
+      track.appendChild(fragment);
+
+      const ensureTrackLength = () => {
+        const trackWidth = track.scrollWidth;
+        const wrapperWidth = wrapper.clientWidth;
+        if (trackWidth < wrapperWidth * 2) {
+          baseItems.forEach(item => track.appendChild(item.cloneNode(true)));
+          return false;
+        }
+        return true;
+      };
+
+      while (!ensureTrackLength()) {
+        // repeat cloning until the track is wide enough to avoid visible gaps
       }
-      requestAnimationFrame(step);
+
+      const duration = parseFloat(track.dataset.duration) || 48;
+      track.style.animationDuration = `${duration}s`;
+    }
+
+    function initClientMarquee() {
+      const row1 = document.getElementById('marqueeRow1');
+      const row2 = document.getElementById('marqueeRow2');
+
+      const logosRow1 = [
+        { src: 'assets/logos/infobip.png', alt: 'Infobip' },
+        { src: 'assets/logos/standard.png', alt: 'Standard Telecom' },
+        { src: 'assets/logos/pygma.png', alt: 'Pygma Communication' },
+        { src: 'assets/logos/pactilis.png', alt: 'Pactilis' },
+        { src: 'assets/logos/utex.png', alt: 'UTEX' },
+        { src: 'assets/logos/texaf.png', alt: 'Texaf Bilembo' },
+      ];
+
+      const logosRow2 = [
+        { src: 'assets/logos/wiko.png', alt: 'Wiko' },
+        { src: 'assets/logos/ascoma.png', alt: 'Ascoma' },
+        { src: 'assets/logos/carrigres.png', alt: 'Carrigres' },
+        { src: 'assets/logos/infobip.png', alt: 'Infobip' },
+        { src: 'assets/logos/standard.png', alt: 'Standard Telecom' },
+        { src: 'assets/logos/pygma.png', alt: 'Pygma Communication' },
+      ];
+
+      setupMarqueeTrack(row1, logosRow1);
+      setupMarqueeTrack(row2, logosRow2);
     }
 
     function openArticle(id) {
@@ -194,4 +264,6 @@
         newsletterSent.classList.remove('is-hidden');
         newsletterForm.reset();
       });
+
+      initClientMarquee();
     });
