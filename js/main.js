@@ -224,27 +224,101 @@
 
       counters.forEach(count => countObserver.observe(count));
 
+      // serviceToggles.forEach(toggle => {
+      //   toggle.addEventListener('click', () => {
+      //     const card = toggle.closest('.service-card');
+      //     const details = card.querySelector('.service-details');
+      //     const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      //     toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      //     details.classList.toggle('expanded', !expanded);
+      //     card.classList.toggle('open', !expanded);
+      //   });
+      // });
+      // ---- code pour l' effet accordéon --- //
+
+      // --- code rajouter --- //
+
       serviceToggles.forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const card = toggle.closest('.service-card');
-          const details = card.querySelector('.service-details');
-          const expanded = toggle.getAttribute('aria-expanded') === 'true';
-          toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-          details.classList.toggle('expanded', !expanded);
-          card.classList.toggle('open', !expanded);
-        });
+
+          toggle.addEventListener('click', () => {
+
+              const card = toggle.closest('.service-card');
+              const details = card.querySelector('.service-details');
+              const isOpen = card.classList.contains('open');
+
+              // Ferme toutes les cartes
+              serviceToggles.forEach(otherToggle => {
+
+                  const otherCard = otherToggle.closest('.service-card');
+                  const otherDetails = otherCard.querySelector('.service-details');
+
+                  otherCard.classList.remove('open');
+                  otherDetails.classList.remove('expanded');
+                  otherToggle.setAttribute('aria-expanded', 'false');
+
+              });
+
+              // Ouvre seulement celle cliquée
+              if (!isOpen) {
+
+                  card.classList.add('open');
+                  details.classList.add('expanded');
+                  toggle.setAttribute('aria-expanded', 'true');
+
+              }
+
+          });
+
       });
 
+
+      // accordions.forEach(item => {
+      //   const button = item.querySelector('.accordion-button');
+      //   const content = item.querySelector('.accordion-content');
+      //   button.addEventListener('click', () => {
+      //     const expanded = button.getAttribute('aria-expanded') === 'true';
+      //     button.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      //     item.classList.toggle('open', !expanded);
+      //     content.style.maxHeight = !expanded ? `${content.scrollHeight}px` : '0';
+      //   });
+      // });
+
       accordions.forEach(item => {
-        const button = item.querySelector('.accordion-button');
-        const content = item.querySelector('.accordion-content');
-        button.addEventListener('click', () => {
-          const expanded = button.getAttribute('aria-expanded') === 'true';
-          button.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-          item.classList.toggle('open', !expanded);
-          content.style.maxHeight = !expanded ? `${content.scrollHeight}px` : '0';
-        });
+
+          const button = item.querySelector('.accordion-button');
+          const content = item.querySelector('.accordion-content');
+
+          button.addEventListener('click', () => {
+
+              const isOpen = item.classList.contains('open');
+
+              // Ferme tous les accordéons
+              accordions.forEach(other => {
+
+                  other.classList.remove('open');
+
+                  const otherButton = other.querySelector('.accordion-button');
+                  const otherContent = other.querySelector('.accordion-content');
+
+                  otherButton.setAttribute('aria-expanded', 'false');
+                  otherContent.style.maxHeight = '0';
+
+              });
+
+              // Si celui-ci n'était pas ouvert, on l'ouvre
+              if (!isOpen) {
+
+                  item.classList.add('open');
+                  button.setAttribute('aria-expanded', 'true');
+                  content.style.maxHeight = `${content.scrollHeight}px`;
+
+              }
+
+          });
+
       });
+
+      // --- code fin accordéon effet ---- //
 
       articleCards.forEach(card => {
         card.addEventListener('click', () => openArticle(card.dataset.article));
