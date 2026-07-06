@@ -8,6 +8,7 @@
     const navLinks = Array.from(document.querySelectorAll('.drawer-nav a'));
     const counters = Array.from(document.querySelectorAll('.count'));
     const serviceToggles = Array.from(document.querySelectorAll('.service-toggle'));
+    const teamToggles = Array.from(document.querySelectorAll('.team-toggle'));
     const accordions = Array.from(document.querySelectorAll('.accordion-item'));
     const articleCards = Array.from(document.querySelectorAll('.article-card'));
     const articleModal = document.getElementById('articleModal');
@@ -250,6 +251,39 @@
               serviceToggles.forEach(otherToggle => {
 
                   const otherCard = otherToggle.closest('.service-card');
+                  const otherDetails = otherCard.querySelector('.service-details');
+
+                  otherCard.classList.remove('open');
+                  otherDetails.classList.remove('expanded');
+                  otherToggle.setAttribute('aria-expanded', 'false');
+
+              });
+
+              // Ouvre seulement celle cliquée
+              if (!isOpen) {
+
+                  card.classList.add('open');
+                  details.classList.add('expanded');
+                  toggle.setAttribute('aria-expanded', 'true');
+
+              }
+
+          });
+
+      });
+
+      teamToggles.forEach(toggle => {
+
+          toggle.addEventListener('click', () => {
+
+              const card = toggle.closest('.team-card');
+              const details = card.querySelector('.service-details');
+              const isOpen = card.classList.contains('open');
+
+              // Ferme toutes les fiches
+              teamToggles.forEach(otherToggle => {
+
+                  const otherCard = otherToggle.closest('.team-card');
                   const otherDetails = otherCard.querySelector('.service-details');
 
                   otherCard.classList.remove('open');

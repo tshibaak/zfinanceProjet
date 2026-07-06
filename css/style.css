@@ -516,7 +516,7 @@ section {
   align-items: flex-start;
 }
 
-.service-detail span {
+.service-detail > span {
   width: 6px;
   height: 6px;
   border-radius: 999px;
@@ -525,13 +525,63 @@ section {
   flex-shrink: 0;
 }
 
-.service-summary .chevron {
+.service-detail-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.service-detail-text ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.service-detail-text li {
+  position: relative;
+  padding-left: 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.service-detail-text li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--blue);
+}
+
+.service-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid transparent;
+  color: var(--blue);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.service-card.open .service-cta,
+.service-card:hover .service-cta {
+  border-top-color: var(--border);
+}
+
+.service-cta .chevron {
   color: var(--blue);
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 
-.service-card.open .service-summary .chevron {
+.service-card.open .service-cta .chevron {
   transform: rotate(180deg);
 }
 
@@ -802,6 +852,41 @@ section {
   text-transform: uppercase;
   color: var(--blue);
   margin-bottom: 12px;
+}
+
+.team-card .service-details-inner {
+  padding: 16px 0 4px;
+}
+
+.team-card .service-details.expanded {
+  max-height: 900px;
+}
+
+.team-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
+  padding: 14px 0 0;
+  border: none;
+  border-top: 1px solid var(--border);
+  background: transparent;
+  color: var(--blue);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+}
+
+.team-toggle .chevron {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.team-card.open .team-toggle .chevron {
+  transform: rotate(180deg);
 }
 
 .team-extra {
@@ -2406,9 +2491,3 @@ footer {
   }
 }
 
-.position_texte_chevron{
-  display: flex;
-  position: relative;
-  left: 19px;
-  top: -40px;
-}
