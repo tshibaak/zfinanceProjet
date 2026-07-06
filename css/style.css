@@ -443,6 +443,7 @@ section {
 
 .service-card .service-summary {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 14px;
   margin-bottom: 20px;
@@ -2403,4 +2404,11 @@ footer {
   .trust-image {
     height: 320px;
   }
+}
+
+.position_texte_chevron{
+  display: flex;
+  position: relative;
+  left: 19px;
+  top: -40px;
 }
