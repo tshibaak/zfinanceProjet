@@ -1,4 +1,7 @@
-﻿const heroSlides = Array.from(document.querySelectorAll('.hero-slide'));
+﻿import { api } from "./api.js";
+import { contacts } from "./api.js";
+
+const heroSlides = Array.from(document.querySelectorAll('.hero-slide'));
 
     const header = document.querySelector('.navbar');
     const burger = document.querySelector('.burger');
@@ -192,6 +195,32 @@
       document.body.style.overflow = '';
     }
 
+    async function subscribe(email) {
+      try {
+        const response = await fetch(`${api}/api/subscribers/store`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ email })
+        });
+    
+        // Vérifier si la réponse est OK
+        if (!response.ok) {
+          throw new Error(`Erreur HTTP ${response.status}`);
+        }
+    
+        // Récupérer la réponse JSON
+        const data = await response.json();
+        console.log("Réponse API:", data);
+    
+        return data; // tu peux l'utiliser pour afficher un message à l'utilisateur
+      } catch (error) {
+        console.error("Erreur lors de la requête:", error);
+        return { status: "error", message: error.message };
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       setNavbarState();
       startHeroRotation();
@@ -361,14 +390,26 @@
       modalClose.addEventListener('click', closeArticle);
       articleModal.addEventListener('click', e => { if (e.target === articleModal) closeArticle(); });
 
-      contactForm.addEventListener('submit', event => {
+      contactForm.addEventListener('submit',async event => {
         event.preventDefault();
+        const formData = new FormData(contactForm);
+        const datas = Object.fromEntries(formData.entries());
+        const result = await contacts(datas);
         formSent.classList.remove('is-hidden');
         contactForm.reset();
       });
 
-      newsletterForm.addEventListener('submit', event => {
+      newsletterForm.addEventListener('submit', async event => {
         event.preventDefault();
+        const formData = new FormData(newsletterForm);
+        const email = formData.get('email');
+        const result = await subscribe(email);
+
+         if (result.status === "success") {
+           alert("Inscription réussie !");
+         } else {
+           alert("Erreur: " + result.message);
+         }
         newsletterSent.classList.remove('is-hidden');
         newsletterForm.reset();
       });
