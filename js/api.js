@@ -1,4 +1,4 @@
-export const api = "http://localhost:8000";
+export const api = "https://admin.zfinancesdrc.com";
 
 export async function contacts(datas) {
   
