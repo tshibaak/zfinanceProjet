@@ -1,6 +1,0 @@
-j'ai bésoin que tu m'arranges l'effet accordéon dans index.html dans le sections suivantes :
-
-Nos services , arrange l'effet accordéon
-Le cabinet , il y a 5 sections qui contiennent des informations , sauf que l'effet accordéon n'est pas bien implementer
-
-rs

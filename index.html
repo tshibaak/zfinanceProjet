@@ -769,13 +769,13 @@
             <span class="eyebrow">Contact</span>
             <h2 class="section-title contact-title">Parlons de votre projet</h2>
             <p class="section-subtitle contact-subtitle">Remplissez le formulaire et nous vous recontacterons sous 24h ouvrées.</p>
-            <form id="contactForm" action="../../../src/api/api_accueil.php" method="POST">
+            <form id="contactForm"  method="POST">
               <div class="field-row">
-                <div class="field"><label>Nom complet *</label><input name="nom" placeholder="Jean kadima" required></div>
+                <div class="field"><label>Nom complet *</label><input name="name" placeholder="Jean kadima" required></div>
                 <div class="field"><label>Email *</label><input name="email" type="email" placeholder="jeankadima@exemple.cd" required></div>
               </div>
               <div class="field-row">
-                <div class="field"><label>Téléphone</label><input name="telephone" type="tel" placeholder="+ ..."></div>
+                <div class="field"><label>Téléphone</label><input name="phone" type="tel" placeholder="+ ..."></div>
                 <div class="field"><label>Sujet *</label><select name="sujet" required>
                     <option value="">Sélectionner un service</option>
                     <option value="comptabilite">Expertise Comptable</option>
@@ -857,7 +857,7 @@
           <h4 class="footer-col-title">Newsletter</h4>
           <p class="footer-newsletter-desc">Recevez nos actualités fiscales et comptables.</p>
           <form id="newsletterForm">
-            <input type="email" placeholder="votre@email.cd" required>
+            <input type="email" placeholder="votre@email.cd" required name="email">
             <button type="submit">OK</button>
           </form>
           <p class="newsletter-sent is-hidden" id="newsletterSent">✓ Inscription confirmée !</p>
@@ -869,6 +869,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+ <script type="module" src="js/main.js"></script>
 </body>
 </html>
